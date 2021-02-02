@@ -10,18 +10,21 @@
 
 <body>
     <script>
-      
+        const time = new Date().getHours();
+        console.log("Time", time);
 
-var d = new Date();
-var time = d.getHours();
+        if (time < 5) {
+            console.log("Godnat");
 
-if (time < 10) { console.log("Godmorgen"); } else if (time> 10) {
-    console.log("Goddag");
-    } else if (time > 18) {
-    console.log("Godaften");
-    } else {
-    console.log("Godnat");
-    }
+        } else if (time < 10) {
+            console.log("Godmorgen");
+
+        } else if (time < 18) {
+            console.log("Goddag");
+
+        } else {
+            console.log("Godnat");
+        }
 
     </script>
 </body>
