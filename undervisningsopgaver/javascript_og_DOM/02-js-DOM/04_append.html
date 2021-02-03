@@ -97,11 +97,11 @@
         first.alt = "en skov";
 
         //        img 2
-                const first1 = document.querySelector("article:nth-child(2) img");
-                console.log(first1);
+        const first1 = document.querySelector("article:nth-child(2) img");
+        console.log(first1);
         //        img 2 bileder ændret
-                first1.src = "vej.jpg";
-         first1.alt = "en vej";
+        first1.src = "vej.jpg";
+        first1.alt = "en vej";
 
 
 
@@ -142,15 +142,15 @@
         // // //indsæt nyt billede
         let img = document.createElement("img");
         // // //link til billede
-        img.src = "vej.jpg";
+        img.src = "road.jpg";
         // //tilføj billede til artikel
         newArticle.appendChild(img);
 
 
         // //nyt p element
-        let nyTekst = document.createElement("p");
+        let nyTekst = document.createTextNode("Her er der mere tekst bla bla bla");
         // //indsæt tekst ind i p
-        nyTekst.innerHTMK = "fsdgfhgjhkjlkhjghfgdfsdfdgfhgjh";
+        nyTekst.innerHTML = "p";
         //sætter p ind i artikel
         newArticle.appendChild(nyTekst);
 

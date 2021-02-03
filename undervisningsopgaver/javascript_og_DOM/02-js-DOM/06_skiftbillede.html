@@ -102,18 +102,18 @@
 
 
         //        img 1
-        const pic1 = document.querySelector("article:nth-child(2) img");
+        const pic1 = document.querySelector("article:nth-child(1) img");
         console.log(pic1);
         //        img 1 billeder ændret
         pic1.src = "skov-royaltyfree.jpg";
         pic1.alt = "en skov";
 
         //        //        img 2
-                const pic = document.querySelector("article:nth-child(1) img");
-                console.log(pic);
+        const pic = document.querySelector("article:nth-child(2) img");
+        console.log(pic);
         // // img 2 billeder ændret
-                pic.src = "vej.jpg";
-                pic.alt = "en vej";
+        pic.src = "vej.jpg";
+        pic.alt = "en vej";
 
 
 
@@ -128,23 +128,6 @@
         console.log(article1);
         article1.innerHTML = "<h3>Artikel nr. 2</h3>";
         article1.textContent = "Artikel nr. 2";
-
-        //Laver en ekstra artikel gennem JS
-        let mainSection = document.querySelector("section");
-        //        nyt artikel element
-        let newArticle = document.createElement("article");
-        //        ny h3
-        let overskrift = document.createElement("h3");
-        //        tekst til overskriften
-        let overskriftTekst = document.createTextNode("Artikel nr. 3");
-        //indsæt tekst i overskrift
-        overskrift.appendChild(overskriftTekst);
-        //        tilføj overskrift til artikel
-        newArticle.appendChild(overskrift);
-        //tilføj artikel til section
-        mainSection.appendChild(newArticle);
-
-
 
         //        p tekst artikel 1
         const tekst = document.querySelector("article:nth-child(1) p");
@@ -163,6 +146,25 @@
         console.log(body);
         body.textContent = "Bunden af sitet";
         body.innerHTML = "<footer>Bunden af sitet</footer>";
+
+
+
+
+
+        //Laver en ekstra artikel gennem JS
+        let mainSection = document.querySelector("section");
+        //        nyt artikel element
+        let newArticle = document.createElement("article");
+        //        ny h3
+        let overskrift = document.createElement("h3");
+        //        tekst til overskriften
+        let overskriftTekst = document.createTextNode("Artikel nr. 3");
+        //indsæt tekst i overskrift
+        overskrift.appendChild(overskriftTekst);
+        //        tilføj overskrift til artikel
+        newArticle.appendChild(overskrift);
+        //tilføj artikel til section
+        mainSection.appendChild(newArticle);
 
     </script>
 
