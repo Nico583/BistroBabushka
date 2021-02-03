@@ -54,7 +54,7 @@
             </article>
 
             <article>
-                <img src="https://placeimg.com/400/300/any" alt="" class>
+                <img src="https://placeimg.com/400/300/any" alt="" class="first">
                 <h3>Article 2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi ratione eius ad autem rem possimus culpa numquam incidunt ipsam ullam, adipisci, voluptatibus labore obcaecati, dolorem odit modi, aliquid quaerat fugiat harum laborum eveniet. Aliquam similique dicta eum at accusamus.</p>
             </article>
@@ -68,8 +68,8 @@
         //        overskriften titel header
         const titel = document.querySelector("header");
         console.log(titel);
-        titel.textContent = "GODE ARTIKLER";
-        titel.innerHTML = "<h1>GODE ARTIKLER</h1>";
+        //        titel.textContent = "BILLEDEGALLERI";
+        titel.innerHTML = "<h1>BILLEDEGALLERI</h1>";
 
 
         //        main
@@ -84,31 +84,50 @@
         // undertitel h2
         const undertitel = document.querySelector("h2");
         console.log(undertitel);
-        undertitel.textContent = "Læs lidt her";
-        undertitel.innerHTML = "<h2>Læs lidt her</h2>";
+        undertitel.textContent = "Se her!";
+        //        undertitel.innerHTML = "<h2>Se her!</h2>";
+
+
+        //        img 1
+        const first = document.querySelector("section:nth-child(2) img");
+        console.log(first);
+        //        img 1 bileder ændret
+        first.src = "skov-royaltyfree.jpg";
+        first.alt = "en skov";
+
+        //        img 2
+        //        const first1 = document.querySelector("section:nth-child(4) img");
+        //        console.log(first1);
+        //        img 2 bileder ændret
+        //        first1.src = "vej-royaltyfree.jpg";
+        // first1.alt = "en vej";
+
+
 
         //  artikel nr 1 - h3
-        const article = document.querySelector("h3");
+        const article = document.querySelector("article:nth-child(1) h3");
         console.log(article);
         article.textContent = "Artikel nr. 1";
 
 
-        //        // artikel nr. 2 - h3
-//        const article1 = document.querySelectorr("article:nth-child(2) h3");
- // // console.log(article1);
- // article1.textContent = "Artikel nr. 2";
+        //        // artikel nr. 2 h3
+        const article1 = document.querySelector("article:nth-child(2) h3");
+        console.log(article1);
+        article1.innerHTML = "<h3>Artikel nr. 2</h3>";
+        article1.textContent = "Artikel nr. 2";
 
-        //        P lorem tekst 1
-        const h3 = document.querySelector("p");
-        console.log(h3);
-        h3.textContent = "Her er en masse tekst bla bla bla bla bla";
-        h3.innerHTML = "<p>Her er en masse tekst bla bla bla bla bla</p>";
 
-        //        P lorem tekst 2
-        //        const nav p = document.querySelector("nav p");
-        //        console.log(nav p);
-        //        nav p.textContent = "Her er en masse tekst bla bla bla bla bla";
-        //        nav p.innerHTML = "<p>Her er en masse tekst bla bla bla bla bla</p>";
+        //        p tekst artikel 1
+        const tekst = document.querySelector("article:nth-child(1) p");
+        console.log(tekst);
+        tekst.innerHTML = "<p>Her er en masse tekst bla bla bla</p>";
+        tekst.textContent = "Her er en masse tekst bla bla bla";
+
+        //           p tekst artikel 2
+        const tekst1 = document.querySelector("article:nth-child(2) p");
+        console.log(tekst1);
+        tekst1.innerHTML = "<p>Her er også en masse tekst bla bla bla</p>";
+        tekst1.textContent = "Her er også en masse tekst bla bla bla";
 
         //        footer
         const body = document.querySelector("footer");
@@ -116,18 +135,8 @@
         body.textContent = "Bunden af sitet";
         body.innerHTML = "<footer>Bunden af sitet</footer>";
 
-        //billede 1 bliver ændret
-        const pic11 = document.querySelector("article:nth-child(1) img");
-        console.log(pic11);
-        //        pic11.src = "skov-royaltyfree.jpg";
-        //        pic11.alt = "natur";
-
-        //billede 2 bliver ændret
-        //        const pic11 = document.querySelector("article:first-child img");
-        // console.log(pic11);
-        // pic11.src = "skov-royaltyfree.jpg";
-
     </script>
+
 
 
 
