@@ -132,19 +132,23 @@
         let overskriftTekst = document.createTextNode("Artikel nr. 3");
 
 
-        //tilføj artikel til section
-        mainSection.appendChild(newArticle);
-        //tilføj overskrift til artikel
-        newArticle.appendChild(overskrift);
-        //indsæt tekst i overskrift
-        overskrift.appendChild(overskriftTekst);
-
         // // //indsæt nyt billede
         let img = document.createElement("img");
         // // //link til billede
         img.src = "road.jpg";
         // //tilføj billede til artikel
         newArticle.appendChild(img);
+
+
+        //tilføj artikel til section
+        mainSection.appendChild(newArticle);
+        //indsæt tekst i overskrift
+        overskrift.appendChild(overskriftTekst);
+        //tilføj overskrift til artikel
+        newArticle.appendChild(overskrift);
+
+
+
 
 
         // //nyt p element
