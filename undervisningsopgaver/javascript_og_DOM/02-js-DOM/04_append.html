@@ -59,6 +59,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi ratione eius ad autem rem possimus culpa numquam incidunt ipsam ullam, adipisci, voluptatibus labore obcaecati, dolorem odit modi, aliquid quaerat fugiat harum laborum eveniet. Aliquam similique dicta eum at accusamus.</p>
             </article>
 
+
         </section>
     </main>
 
@@ -96,11 +97,11 @@
         first.alt = "en skov";
 
         //        img 2
-//        const pic1 = document.querySelector("section:nth-child() img");
- // console.log(pic1);
+        //        const first1 = document.querySelector("section:nth-child(4) img");
+        //        console.log(first1);
         //        img 2 bileder ændret
-//        pic1.src = "vej-royaltyfree.jpg";
-//        pic1.alt = "en vej";
+        //        first1.src = "vej-royaltyfree.jpg";
+        // first1.alt = "en vej";
 
 
 
@@ -115,6 +116,22 @@
         console.log(article1);
         article1.innerHTML = "<h3>Artikel nr. 2</h3>";
         article1.textContent = "Artikel nr. 2";
+
+        //Laver en ekstra artikel gennem JS
+        let mainSection = document.querySelector("section");
+        //        nyt artikel element
+        let newArticle = document.createElement("article");
+        //        ny h3
+        let overskrift = document.createElement("h3");
+        //        tekst til overskriften
+        let overskriftTekst = document.createTextNode("Artikel nr. 3");
+        //indsæt tekst i overskrift
+        overskrift.appendChild(overskriftTekst);
+        //        tilføj overskrift til artikel
+        newArticle.appendChild(overskrift);
+        //tilføj artikel til section
+        mainSection.appendChild(newArticle);
+
 
 
         //        p tekst artikel 1
