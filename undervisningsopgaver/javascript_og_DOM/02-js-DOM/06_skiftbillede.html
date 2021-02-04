@@ -166,6 +166,29 @@
         //tilføj artikel til section
         mainSection.appendChild(newArticle);
 
+        // // //indsæt nyt billede
+        let img = document.createElement("img");
+        // // //link til billede
+        img.src = "road.jpg";
+        // //tilføj billede til artikel
+        newArticle.appendChild(img);
+
+        //indsæt tekst i overskrift
+        overskrift.appendChild(overskriftTekst);
+        //        tilføj overskrift til artikel
+        newArticle.appendChild(overskrift);
+        //tilføj artikel til section
+        mainSection.appendChild(newArticle);
+
+
+
+        // //nyt p element artikel 3
+        let nyTekst = document.createTextNode("Her er der mere tekst bla bla bla");
+        // //indsæt tekst ind i p
+        nyTekst.innerHTML = "p";
+        //sætter p ind i artikel
+        newArticle.appendChild(nyTekst);
+
     </script>
 
 

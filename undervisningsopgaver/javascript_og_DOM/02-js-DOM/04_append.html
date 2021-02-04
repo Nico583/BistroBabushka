@@ -132,6 +132,7 @@
         let overskriftTekst = document.createTextNode("Artikel nr. 3");
 
 
+
         // // //indsæt nyt billede
         let img = document.createElement("img");
         // // //link til billede
@@ -140,29 +141,12 @@
         newArticle.appendChild(img);
 
 
-        //tilføj artikel til section
-        mainSection.appendChild(newArticle);
         //indsæt tekst i overskrift
         overskrift.appendChild(overskriftTekst);
         //tilføj overskrift til artikel
         newArticle.appendChild(overskrift);
-
-
-
-
-
-        // //nyt p element
-        let nyTekst = document.createTextNode("Her er der mere tekst bla bla bla");
-        // //indsæt tekst ind i p
-        nyTekst.innerHTML = "p";
-        //sætter p ind i artikel
-        newArticle.appendChild(nyTekst);
-
-
-
-
-
-
+        //tilføj artikel til section
+        mainSection.appendChild(newArticle);
 
 
 
@@ -177,6 +161,8 @@
         console.log(tekst1);
         tekst1.innerHTML = "<p>Her er også en masse tekst bla bla bla</p>";
         tekst1.textContent = "Her er også en masse tekst bla bla bla";
+
+
 
         //        footer
         const body = document.querySelector("footer");
