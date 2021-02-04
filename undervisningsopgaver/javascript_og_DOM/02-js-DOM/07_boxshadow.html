@@ -36,8 +36,10 @@
         border: 1px solid #888;
     }
 
-    article:nth-child(1) img {
-        cursor: pointer;
+
+
+    .the_shadow {
+        box-shadow: 9px 0px 34px 2px rgba(0, 0, 0, 0.75);
     }
 
 </style>
@@ -49,15 +51,14 @@
     <main>
 
         <h2>Undertitel</h2>
-        <section id="section1">
-
-            <article>
+        <section>
+            <article class="the_shadow">
                 <img src="https://placeimg.com/400/300/arch" alt="" class="first">
                 <h3>Article 1</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quam magni maxime officia ad qui eaque, ab praesentium et quo inventore necessitatibus eveniet asperiores eos velit est laboriosam obcaecati dolorem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit incidunt voluptatum praesentium asperiores cum odit dignissimos facilis libero.</p>
             </article>
 
-            <article>
+            <article class="the_shadow">
                 <img src="https://placeimg.com/400/300/any" alt="" class="">
                 <h3>Article 2</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sequi ratione eius ad autem rem possimus culpa numquam incidunt ipsam ullam, adipisci, voluptatibus labore obcaecati, dolorem odit modi, aliquid quaerat fugiat harum laborum eveniet. Aliquam similique dicta eum at accusamus.</p>
@@ -154,11 +155,11 @@
 
 
 
-
         //Laver en ekstra artikel gennem JS
         let mainSection = document.querySelector("section");
         //        nyt artikel element
         let newArticle = document.createElement("article");
+        newArticle.classList.add("the_shadow");
         //        ny h3
         let overskrift = document.createElement("h3");
         //        tekst til overskriften
@@ -170,14 +171,15 @@
         //tilføj artikel til section
         mainSection.appendChild(newArticle);
 
+
+
+
         // // //indsæt nyt billede
         let img = document.createElement("img");
         // // //link til billede
         img.src = "road.jpg";
         // //tilføj billede til artikel
         newArticle.appendChild(img);
-
-
 
 
 
