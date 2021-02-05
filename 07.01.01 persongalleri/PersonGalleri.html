@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonGalleri</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    article {
+        padding: 25px;
+        margin: 5px;
+        border-radius: 10px;
+        border: solid grey;
+
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 15px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Roboto';
+    }
+
+    h2,
+    p {
+        font-family: 'Roboto';
+    }
+
+</style>
+
+<body>
+    <h1>PERSONGALLERI</h1>
+    <main></main>
+    <template>
+        <article>
+            <img src="" alt="" class="billede">
+            <h2 class="navn"></h2>
+            <p class="titel"></p>
+            <p class="efternavn"></p>
+        </article>
+    </template>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("DOM er loaded");
+        }
+
+        //url til billederne
+        const url = "https://persongalleri-5d3e.restdb.io/rest/persongalleri";
+        const medieurl = "https://persongalleri-5d3e.restdb.io/media/";
+
+        //key til at komme ind til url på billederne
+        const options = {
+            headers: {
+                'x-apikey': "600fe9211346a1524ff12e31"
+            }
+        };
+
+        async function hentData() {
+            const resspons = await fetch(url, options);
+            const json = await resspons.json();
+            vis(json);
+        };
+
+
+
+        const main = document.querySelector("main");
+        const template = document.querySelector("template").content;
+
+
+        function vis(json) {
+            console.log(json)
+            json.forEach(person => {
+                const klon = template.cloneNode(true);
+                klon.querySelector(".billede").src = medieurl + person.billede;
+                klon.querySelector(".navn").textContent = person.fornavn;
+                klon.querySelector(".titel").textContent = person.titel;
+                klon.querySelector(".efternavn").textContent = person.efternavn
+                main.appendChild(klon);
+            });
+        }
+
+
+        hentData();
+
+    </script>
+</body>
+
+</html>
