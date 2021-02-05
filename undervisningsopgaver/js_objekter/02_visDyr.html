@@ -37,12 +37,12 @@
         console.log(`navn: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`);
 
         const destination = document.querySelector("#dyr");
-        const navn = `${dyr.navn}`;
+        const overskrift = `${dyr.navn}`;
         const type = `${dyr.type}`;
         const levested = `${dyr.levested}`;
-        destination.querySelector("h3").textContent = dyr.navn;
-        destination.querySelector("h2").textContent = dyr.levested;
-        destination.querySelector("p").textContent = dyr.type;
+        destination.querySelector("h3").textContent = overskrift;
+        destination.querySelector("h2").textContent = levested;
+        destination.querySelector("p").textContent = type;
         destination.querySelector("img").src = dyr.billede;
 
     </script>
