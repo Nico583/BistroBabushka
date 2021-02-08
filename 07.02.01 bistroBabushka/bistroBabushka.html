@@ -16,15 +16,14 @@
 
         main {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             grid-gap: 1em;
             margin: 2em;
         }
 
 
-
         .valgt {
-            background-color: aqua;
+            background-color: blue;
         }
 
     </style>
@@ -35,13 +34,15 @@
         <header>
             <h1>Bistro Babushka</h1>
         </header>
-        <button data-bistro="alle">Alle</button>
+        <button data-bistro="alle" class="valgt">Alle</button>
         <button data-bistro="forretter">Forretter</button>
         <button data-bistro="Hovedretter">Hovedretter</button>
         <button data-bistro="desserter">Desserter</button>
         <button data-bistro="drikkevarer">Drikkevarer</button>
 
     </nav>
+
+
     <main>
         <template>
             <article>
@@ -56,10 +57,8 @@
 
     <script>
         const header = document.querySelector("header h1");
-        const url = "https://babushka-dd8a.restdb.io/rest/menu";
         const medieUrl = "https://babushka-dd8a.restdb.io/media/";
-
-
+        const url = "https://babushka-dd8a.restdb.io/rest/menu";
 
         const options = {
             headers: {
@@ -68,6 +67,7 @@
         };
 
 
+        document.addEventListener("DOMContentLoaded", hentData);
         let menu;
         let filter = "alle";
 
@@ -76,12 +76,18 @@
         const filterKnapper = document.querySelectorAll("nav button");
         filterKnapper.forEach(knap => knap.addEventListener("click", filtrerMenu));
 
+
+
+
         function filtrerMenu() {
+            //sæt variabel "filter" til værdien af data-kategori på den knap
             filter = this.dataset.kategori;
+
+            //fjern klassen valgt fra den knap
             document.querySelector(".valgt").classList.remove("valgt");
-            this.classList.add("valgt");
 
-
+            //marker den knap der er klikket på
+            this.classList.add("valgt")
 
 
             header.textContent = this.textContent;
@@ -97,14 +103,20 @@
             vis(json);
         }
 
-        const main = document.querySelector("main");
-        const template = document.querySelector("template").content;
 
+
+
+        //funktion der viser menu i liste view
         function vis(json) {
             console.log(json);
+
+            const main = document.querySelector("main");
+            const template = document.querySelector("template").content;
+            //select indhold af html skabelon (article)
             main.textContent = "";
             json.forEach(menu => {
                 if (filter == menu.kategori || filter == "alle") {
+                    // loop igennem json (menu)
                     const klon = template.cloneNode(true);
                     klon.querySelector(".billede").src = medieUrl + menu.billede;
                     klon.querySelector(".navn").textContent = menu.navn;
@@ -115,8 +127,6 @@
 
             })
         }
-
-        hentData();
 
     </script>
 </body>
