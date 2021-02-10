@@ -4,17 +4,77 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Bistro Babushka</title>
     <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://use.typekit.net/zby4pjy.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zby4pjy.css">
 </head>
+<style>
+    body {
+        background-color: rgba(255, 235, 197, 0.53);
+    }
+
+
+
+    img.billede {
+        max-width: 100%;
+        width: 40vw;
+        border-radius: 10px;
+        left: 30vw;
+        position: sticky;
+
+    }
+
+
+    h1 {
+        font-family: gala-biline, sans-serif;
+        font-weight: 500;
+        font-size: 5.2vw;
+        text-align: center;
+        color: #e6a11f;
+    }
+
+
+
+    h2,
+    p {
+        font-family: 'Roboto';
+        text-align: center;
+
+    }
+
+
+    button {
+        font-weight: bold;
+        border: none;
+        background-color: rgba(255, 235, 197, 0.12);
+        cursor: pointer;
+        font-size: 12px;
+        position: absolute;
+        top: 10px;
+        padding: 5px;
+
+    }
+
+    .valgt {
+        cursor: pointer;
+        background-color: #e6a11f;
+        border-radius: 3px;
+        border: none;
+
+
+    }
+
+</style>
 
 <body>
+    <h1>BISTRO BABUSHKA</h1>
     <article class="ret">
-        <img src="" alt="" class="billede">
         <h2 class="navn"></h2>
         <p class="kortbeskrivelse"></p>
+        <img src="" alt="" class="billede">
         <p class="pris"></p>
-        <button>Tilbage</button>
+        <button class="valgt">Tilbage</button>
     </article>
 
 
@@ -44,8 +104,8 @@
 
         function visRet() {
             document.querySelector(".navn").textContent = ret.navn;
+            document.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
             document.querySelector(".billede").src = medieurl + ret.billede;
-
             document.querySelector("button").addEventListener("click", tilbageTilRet);
         }
 

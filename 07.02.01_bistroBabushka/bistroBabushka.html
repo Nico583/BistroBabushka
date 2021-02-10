@@ -6,20 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bistro Babushka</title>
     <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://use.typekit.net/zby4pjy.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zby4pjy.css">
 </head>
 
 <style>
+    body {
+        background-color: rgba(255, 235, 197, 0.53);
+    }
+
     img {
         max-width: 100%;
         border-radius: 10px;
+        cursor: pointer;
+
     }
 
     h1 {
-        font-family: 'Roboto';
+        font-family: gala-biline, sans-serif;
+        font-weight: 500;
+        font-size: 5.2vw;
+        text-align: center;
+        color: #e6a11f;
     }
 
     article {
-        padding: 1rem;
+        padding: 20px;
         font-family: 'Roboto';
     }
 
@@ -28,6 +40,7 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 1rem;
         max-width: 1200px;
+        margin: auto;
 
     }
 
@@ -39,28 +52,46 @@
 
     }
 
+    button {
+        font-weight: bold;
+        border: none;
+        background-color: rgba(255, 235, 197, 0.12);
+        cursor: pointer;
+        padding: 5px;
+        margin: 9px;
+        font-size: 12px;
+
+
+    }
+
     .valgt {
         cursor: pointer;
-        background-color: lightgray;
+        background-color: #e6a11f;
+        border-radius: 3px;
+        border: none;
 
     }
 
 </style>
 
 <body>
+
     <header>
-        <h1>Menu</h1>
+        <h1>BISTRO BABUSHKA</h1>
 
         <nav>
-            <button data-kategori="alle" class="valgt">Menu</button>
+            <button data-kategori="alle" class="valgt">Alle</button>
             <button data-kategori="forretter">Foretter</button>
             <button data-kategori="hovedretter">Hovedretter</button>
             <button data-kategori="desserter">Desserter</button>
             <button data-kategori="drikkevarer">Drikkevarer</button>
+
+
         </nav>
     </header>
-    <section id="liste">
-    </section>
+
+
+    <section id="liste"></section>
     <template>
         <article class="ret">
             <img src="" alt="" class="billede">
@@ -71,7 +102,7 @@
     </template>
 
     <script>
-        const header = document.querySelector("header h1");
+        const header = document.querySelector("header h3");
         const medieurl = "https://babushka-dd8a.restdb.io/media/";
 
         const myHeaders = {
