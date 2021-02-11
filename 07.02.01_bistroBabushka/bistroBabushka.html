@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://use.typekit.net/zby4pjy.css">
     <link rel="stylesheet" href="https://use.typekit.net/zby4pjy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <style>
@@ -30,58 +31,116 @@
         color: #e6a11f;
     }
 
+
+    /*De gule "kasser" om billederne*/
     article {
         padding: 10px;
         border-radius: 10px;
         background-color: rgba(230, 161, 31, 0.19);
     }
 
-
+    /*skygge med musen over*/
     article:hover {
         transition: 1s;
         box-shadow: 0px 0px 34px 2px rgba(142, 114, 60, 0.8);
     }
 
+
+    /*    Sat retterne i grid*/
     section {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         grid-gap: 1rem;
-        max-width: 1200px;
-        margin: auto;
-
     }
 
+    /*    knapper menu*/
     nav {
         display: flex;
         justify-content: center;
         padding: 20px;
     }
 
+    /*    resterne knapper*/
     button {
         font-weight: bold;
         border: none;
         background-color: rgba(255, 235, 197, 0.12);
         cursor: pointer;
         padding: 5px;
-        margin: 9px;
+        margin: 13px;
         font-size: 12px;
     }
 
+    /*    style knappen man trykker på*/
     .valgt {
         background-color: #e6a11f;
         border-radius: 3px;
     }
 
+
     h2,
     p {
         font-family: 'Roboto';
-        color: black;
+        text-align: center;
     }
 
+    /*    H3 nede ved footer*/
+    h3 {
+        font-family: gala-biline, sans-serif;
+        font-weight: 500;
+        font-size: 50px;
+        text-align: center;
+        color: #e6a11f;
+        padding-top: 50px;
+
+    }
+
+    /*    babushka dukken øverst*/
     .logo {
         width: 39px;
         height: 61px;
 
+    }
+
+    /*    Footer css*/
+    footer {
+        background-color: rgba(230, 161, 31, 0.19);
+        padding-top: 17px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    }
+
+
+    footer p {
+        font-family: 'roboto';
+        color: black;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    /*    Design på feltet man skriver i*/
+    input {
+        border-radius: 10px;
+        border: transparent;
+        background: white;
+        padding: 8px 12px 10px;
+        font-size: 1rem;
+        margin: 10px;
+    }
+
+
+    /*    sætte flex på, placeres i midten*/
+    #footer_form {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*    subcribe knappen*/
+    #subscribe {
+        border-radius: 10px;
+        background: #e6a11f;
+        color: black;
+        cursor: pointer;
     }
 
 </style>
@@ -89,10 +148,7 @@
 <body>
 
     <header>
-
-
         <h1>BISTRO BABUSHKA <a href="bistroBabushka.html"><img class="logo" src="rus.png" width="35" height="35"></a></h1>
-
 
         <nav>
             <button data-kategori="alle" class="valgt">Alle</button>
@@ -100,8 +156,6 @@
             <button data-kategori="hovedretter">Hovedretter</button>
             <button data-kategori="desserter">Desserter</button>
             <button data-kategori="drikkevarer">Drikkevarer</button>
-
-
         </nav>
     </header>
 
@@ -115,6 +169,20 @@
             <p class="pris"></p>
         </article>
     </template>
+
+    <h3>TILMELD DIG VORES NYHEDSBREV</h3>
+    <footer>
+
+        <p> Hos Bistro Babushka får du lækre fordele, sjove konkurrencer og spændende nyheder</p>
+
+        <form id="footer_form">
+            <input id="email" placeholder="E-MAIL" type="email" name="email" required>
+            <button id="subscribe">TILMELD</button>
+        </form>
+    </footer>
+
+
+
 
     <script>
         const header = document.querySelector("header h3");

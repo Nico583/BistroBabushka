@@ -16,11 +16,9 @@
 
     .billede {
         max-width: 100%;
-        width: 38%;
-        border-radius: 10px;
-        left: 30%;
-        position: sticky;
+        width: 33%;
         padding: 10px;
+        border-radius: 10px;
         background-color: rgba(230, 161, 31, 0.19);
     }
 
@@ -31,7 +29,6 @@
         text-align: center;
         color: #e6a11f;
     }
-
 
     button {
         font-weight: bold;
@@ -48,16 +45,27 @@
 
     }
 
-    h2,
-    p {
-        font-family: 'Roboto';
-        color: black;
-        text-align: center;
-    }
-
     .logo {
         width: 39px;
         height: 61px;
+    }
+
+    h2 {
+        font-family: 'Roboto';
+        margin-top: -17.3px;
+    }
+
+    .langbeskrivelse {
+        display: flex;
+        justify-content: center;
+        width: 400px;
+        font-family: 'Roboto';
+
+    }
+
+    article {
+        display: grid;
+        justify-items: center;
     }
 
 </style>
@@ -67,9 +75,9 @@
 
 
     <article class="ret">
-        <img src="" alt="" class="billede">
         <h2 class="navn"></h2>
-        <p class="kortbeskrivelse"></p>
+        <img src="" alt="" class="billede">
+        <p class="langbeskrivelse"></p>
     </article>
     <button class="valgt">Tilbage</button>
 
@@ -100,7 +108,8 @@
 
         function visRet() {
             document.querySelector(".navn").textContent = ret.navn;
-            document.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
+            //            document.querySelector(".kortbeskrivelse").textContent = ret.kortbeskrivelse;
+            document.querySelector(".langbeskrivelse").textContent = ret.langbeskrivelse;
             document.querySelector(".billede").src = medieurl + ret.billede;
             document.querySelector("button").addEventListener("click", tilbageTilRet);
         }
