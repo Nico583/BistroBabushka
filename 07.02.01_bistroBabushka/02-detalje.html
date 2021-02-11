@@ -14,60 +14,64 @@
         background-color: rgba(255, 235, 197, 0.53);
     }
 
-
-
-    img.billede {
+    .billede {
         max-width: 100%;
-        width: 40%;
+        width: 38%;
         border-radius: 10px;
         left: 30%;
-        position: absolute;
+        position: sticky;
+        padding: 10px;
+        background-color: rgba(230, 161, 31, 0.19);
     }
-
 
     h1 {
         font-family: gala-biline, sans-serif;
         font-weight: 500;
-        font-size: 50px;
+        font-size: 63px;
         text-align: center;
         color: #e6a11f;
     }
 
 
+    button {
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+        position: absolute;
+        top: 9px;
+    }
+
+    .valgt {
+        background-color: #e6a11f;
+        border-radius: 6px;
+
+    }
 
     h2,
     p {
         font-family: 'Roboto';
+        color: black;
         text-align: center;
     }
 
-
-    button {
-        font-weight: bold;
-        font-size: 8px;
-        position: absolute;
-        top: 10px;
-        padding: 4px;
-    }
-
-    .valgt {
-        cursor: pointer;
-        background-color: #e6a11f;
-        border-radius: 3px;
-        border: none;
+    .logo {
+        width: 39px;
+        height: 61px;
     }
 
 </style>
 
 <body>
-    <h1>BISTRO BABUSHKA</h1>
+    <h1>BISTRO BABUSHKA <a href="bistroBabushka.html"><img class="logo" src="rus.png" width="35" height="35"></a></h1>
+
+
     <article class="ret">
+        <img src="" alt="" class="billede">
         <h2 class="navn"></h2>
         <p class="kortbeskrivelse"></p>
-        <img src="" alt="" class="billede">
-        <button class="valgt">Tilbage</button>
     </article>
-
+    <button class="valgt">Tilbage</button>
 
 
     <script>
