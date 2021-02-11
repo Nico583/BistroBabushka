@@ -80,14 +80,11 @@
         }
 
         function filtrerPersoner() {
-            filter = this.dataset.troende;
-            document.querySelector(".valgt").classList.remove("valgt");
-
-            this.classList.add("valgt");
-            visPersoner();
+            filter = this.dataset.troende; //sæt variabel "filter" til værdien af data-troende på den knap
+            document.querySelector(".valgt").classList.remove("valgt"); //fjern klassen valgt fra den knap
+            this.classList.add("valgt"); //marker den knap der er klikket på
+            visPersoner(); //kald funktionen visPersoner efter det nye filter er sat
             header.textContent = this.textContent;
-
-
 
         }
 
